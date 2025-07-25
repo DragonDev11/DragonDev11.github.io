@@ -1,57 +1,43 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <title>الخيارات - DragonDev</title>
+    <title>Options - DragonDev</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="options.css">
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap" rel="stylesheet">
 </head>
 <body>
+    <img src="media/war wallpaper.jpg" alt="Background" class="background">
+
     <div class="container">
-        <h1>⚙️ الإعدادات</h1>
+        <h1>⚙️ Game Options</h1>
 
         <div class="setting">
-            <label for="themeToggle">الوضع الليلي:</label>
-            <input type="checkbox" id="themeToggle">
-        </div>
-
-        <div class="setting">
-            <label for="fontSelect">الخط:</label>
-            <select id="fontSelect">
-                <option value="'Reem Kufi Ink', sans-serif">Reem Kufi</option>
-                <option value="Tahoma">Tahoma</option>
-                <option value="'Scheherazade New', serif">Scheherazade</option>
+            <label for="difficultySelect">Select Difficulty:</label>
+            <select id="difficultySelect">
+                <option value="easy">Easy</option>
+                <option value="normal" selected>Normal</option>
+                <option value="hard">Hard</option>
             </select>
         </div>
 
-        <div class="setting">
-            <label for="volumeSlider">مستوى الصوت:</label>
-            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
-        </div>
-
-        <a href="index.html" class="back-btn">← العودة</a>
+        <a href="index.html" class="back-btn">← Back to Home</a>
     </div>
 
     <script>
-        // Theme toggle
-        const toggle = document.getElementById('themeToggle');
-        toggle.addEventListener('change', () => {
-            document.body.classList.toggle('dark', toggle.checked);
+        const difficultySelect = document.getElementById('difficultySelect');
+
+        // Save to localStorage
+        difficultySelect.addEventListener('change', () => {
+            localStorage.setItem('difficulty', difficultySelect.value);
         });
 
-        // Font change
-        const fontSelect = document.getElementById('fontSelect');
-        fontSelect.addEventListener('change', () => {
-            document.body.style.fontFamily = fontSelect.value;
-        });
-
-        // Volume control
-        const volumeSlider = document.getElementById('volumeSlider');
-        volumeSlider.addEventListener('input', () => {
-            const audio = new Audio('media/track.MP3');
-            audio.volume = volumeSlider.value;
-        });
+        // Load saved difficulty on page load
+        const saved = localStorage.getItem('difficulty');
+        if (saved) {
+            difficultySelect.value = saved;
+        }
     </script>
 </body>
 </html>
