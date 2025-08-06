@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maze generator/solver | Dragon's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    a { color: #00d1b2; text-decoration: none; }
+    h1 { font-size: 2.5rem; border-bottom: 2px solid #00d1b2; padding-bottom: 10px; }
+    img, video {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 15px;
+      background: #111;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Maze generator/solver</h1>
+  <p>
+    The Maze generator/solver is a program that generates a perfect maze using the <a href="https://www.youtube.com/watch?v=uctN47p_KVk">origin shift algorithm (youtube)</a>,
+    and solves it using the <a href="https://en.wikipedia.org/wiki/Depth-first_search">Depth-First Search algorithm (wikipedia)</a> by finding the shortest path between two randomly chosen cells.
+    This program features:
+  </p>
+  <ul>
+    <li>Perfect mazes: Thanks to the <a href="https://www.youtube.com/watch?v=uctN47p_KVk">origin shift algorithm</a>, the program always generates a perfect maze, because every cell in the maze has one and only path connecting it to the origin cell. So the maze is basically a tree where every cell is a child of the origin cell.</li>
+    <li>Graphical rendering: The program renders the whole process in real-time in a separate window using the <a href="https://www.libsdl.org/">SDL3 library</a></li>
+    <li>Interactivity: With the <a href="https://www.libsdl.org/">SDL3 library</a>, the program reads the input of the keyboard and acts accordingly. This allows the user to start/stop the generation process, and give the signal to solve the maze.</li>
+  </ul>
+  <p>How to use:</p>
+  <ul>
+    <li>SPACEBAR: Activate/Deactivate the generation process.</li>
+    <li>0 hotkey: Randomly choose two cells as the entry and the exit</li>
+    <li>9 hotkey: Gives the signal to solve the maze by finding the path between the two previously chosen cells, using the DFS algorithm.</li>
+  </ul>
+  <p id="status"><strong>Status: </strong>Released</p>
+  <p>
+    <strong>Tech stack:</strong> C, SDL3
+  </p>
+  <p><strong>Showcase:</strong></p>
+  <iframe width="100%" height="500" src="https://www.youtube.com/embed/rPNuu7uGIAg" title="Maze generator/solver" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p>
+    <a href="https://github.com/DragonDev11/Maze-generator-solver" target="_blank">View on GitHub</a> (Code not commented)
+  </p>
+  
+  <a href="../index.html" class="back">← Back to Portfolio</a>
+</body>
+</html>

@@ -1,59 +1,142 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head></head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DragonDev</title>
-    <meta name="description" content="Welcome">
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-    <style>
-
-    </style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dragon-Mohamed | Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: #0d0d0d;
+      line-height: 1.6;
+    }
+    header {
+      background: #111;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
+    }
+    header nav {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    header nav a:hover { color: #00d1b2; }
+    section { padding: 100px 20px; max-width: 1000px; margin: auto; }
+    .hero { text-align: center; padding-top: 150px; }
+    .hero h1 { font-size: 3rem; }
+    .hero p { font-size: 1.2rem; margin-top: 10px; color: #ccc; }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      border-bottom: 2px solid #00d1b2;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .skills ul, .projects ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .skills li, .projects a {
+      background: #1c1c1c;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    .projects a:hover {
+      transform: scale(1.05);
+      background: #222;
+      color: #00d1b2;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #777;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div align="right">
-            <ion-icon id="music-switch" name="volume-high" style="cursor: pointer;" size="large"></ion-icon>
-            <audio id="theme" autoplay loop>
-                <source src="media/WAKE UP!.mp3">
-            </audio>
-        </div>
-        <img src="media/war wallpaper.jpg" alt="Background" class="background">
-        <img src="media/solider pfp.jpg" alt="DragonDev's real photo" class="logo"><br>
-        <h1 id="h1">Life</h1>
-        <div class="actions">
-            <a href="#" class="btn">Play</a>
-            <a href="options.html" class="btn">Options</a>
-        </div>
-    </header>
+  <header>
+    <nav>
+      <div class="logo">Dragon</div>
+      <div class="links">
+        <a href="#hero">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
 
+  <section class="hero" id="hero">
+    <h1>Hi, I am Mohamed</h1>
+    <p>I'm known as Dragon in the internet :)</p>
+    <p>Computer Science student • Aspiring Software Developer • Embedded Systems Enthusiast</p>
+  </section>
 
-    <footer>
-        <p></p>
-    </footer>
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>C / C++</li>
+      <li>Java</li>
+      <li>SQL</li>
+      <li>HTML / CSS / PHP</li>
+      <li>Godot (2D & 3D)</li>
+    </ul>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="projects/stockify.html">Stockify</a></li>
+      <li><a href="projects/shell.html">Unix-like Shell</a></li>
+      <li><a href="projects/maze.html">Maze Generator/Solver</a></li>
+      <li><a href="projects/rpg.html">Text-based RPG Combat System</a></li>
+      <li><a href="projects/morse.html">Arduino Morse Translator</a></li>
+    </ul>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a Moroccan computer science student passionate about software development,
+      low-level programming, and game design. I enjoy building efficient tools,
+      exploring new topics and fields, and working on technical challenges.
+    </p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <p>Want to collaborate or hire me? Reach out:</p>
+    <a href="mailto:mohamedredahmichi@gmail.com" style="color: #00d1b2;">mohamedredahmichi@gmail.com</a>
+    <br>
+    <a href="mailto:dragoneevkharkov@gmail.com" style="color: #00d1b2;">dragoneevkharkov@gmail.com</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Dragon. All rights reserved.
+  </footer>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const audio = document.getElementById('theme');
-        const tryPlay = () => {
-            audio.play().catch(() => {
-                document.body.addEventListener('click', () => audio.play(), { once: true });
-            });
-        };
-        tryPlay();
-    });
-
-    document.getElementById("music-switch").addEventListener('click', () => {
-        const audio = document.getElementById("theme");
-        const icon = document.getElementById("music-switch");
-        audio.muted = !audio.muted;
-        icon.name = audio.muted ? 'volume-mute' : 'volume-high';
-    });
-</script>
 </html>

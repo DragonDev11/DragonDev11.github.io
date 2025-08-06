@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arduino Morse Translator | Dragon's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    a { color: #00d1b2; text-decoration: none; }
+    h1 { font-size: 2.5rem; border-bottom: 2px solid #00d1b2; padding-bottom: 10px; }
+    img, video {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 15px;
+      background: #111;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Arduino Morse Code Translator</h1>
+  <p>
+    This project is a simple Morse Code Translator built using an <a href="https://www.arduino.cc">Arduino UNO</a>. It translates plain text into Morse code and plays it through a buzzer. The system supports:
+  </p>
+  <ul>
+    <li><strong>Text-to-Morse Translation:</strong> A string is entered into the Arduino sketch and is translated into Morse code, which is played through a buzzer using timed beeps.</li>
+    <li><strong>Buzzer Integration:</strong> A passive buzzer is wired to one of the digital pins and emits short and long tones for dots and dashes respectively.</li>
+    <li><strong>Back-translation:</strong> The system also supports Morse-to-Text translation from hardcoded input, and it works correctly.</li>
+    <li><strong>Button Input (WIP):</strong> A button is also wired to the board with the intention of manually inputting Morse signals. However, the current button setup does not function as intended yet. Improvements to hardware debouncing and detection logic are planned.</li>
+  </ul>
+  <p>How it works:</p>
+  <ul>
+    <li>Each letter in the input string is translated into Morse code using a lookup table.</li>
+    <li>The tone() function is used to control the buzzer and emit the correct signal pattern.</li>
+    <li>For back-translation, the program matches hardcoded Morse sequences with their corresponding characters.</li>
+  </ul>
+  <p id="status"><strong>Status: </strong>Under development</p>
+  <p>
+    <strong>Tech stack:</strong> Arduino C++, buzzer, button, 1K resistor
+  </p>
+  <p>
+    <a href="https://github.com/DragonDev11/Arduino-morse-translator" target="_blank">View on GitHub</a> (Code not commented)
+  </p>
+  <p><strong>Showcase:</strong></p>
+  <iframe width="100%" height="500" src="https://www.youtube.com/embed/v83_Uwg_WDg" title="Arduino Morse Code Translator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p><strong>Circuit:</strong></p>
+  <p id="note">NOTE: The circuit does not include the button, because I used a <a href="https://www.reddit.com/r/arduino/comments/14giiu0/connect_3_pin_mouse_button_to_arduino_uno/#:~:text=You%20bet!,Have%20fun!">triple pin (C,NC,NO) mouse button</a>, which is not supported in <a href="https://www.tinkercad.com/">Tinkercad</a> where I designed the circuit.</p>
+  <object data="../docs/circuit.pdf" type="application/pdf" width="100%" height="500px">
+    <p>Your browser does not support PDFs. <a href="../docs/circuit.pdf">Download PDF</a></p>
+  </object>
+  <a href="../index.html" class="back">← Back to Portfolio</a>
+</body>
+</html>
