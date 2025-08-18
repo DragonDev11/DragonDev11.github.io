@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris | Dragon's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    a { color: #00d1b2; text-decoration: none; }
+    h1 { font-size: 2.5rem; border-bottom: 2px solid #00d1b2; padding-bottom: 10px; }
+    img, video, iframe {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 8px 15px;
+      background: #111;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tetris</h1>
+  <p>
+    This project is a modern implementation of the classic <strong>Tetris</strong> game, written entirely in C.  
+    The program features:
+  </p>
+  <ul>
+    <li><strong>Gameplay logic:</strong> Blocks (tetrominoes) are randomly generated and fall down a 16x32 grid. The player can move and rotate them to complete lines. Completed lines are cleared, and the score increases.<br><img src="../media/TetrisShowcase.gif" alt="Tetris" width="200"></li>
+    <li><strong>Bitmask-based tetrominoes:</strong> Each tetromino shape is defined with bitmasks, making rotations and collisions efficient to handle.<br><img src="../media/block bitmasks.png" alt="T block bitmask" width="200"><img src="../media/T block.png" alt="T block" width="150"></li>
+    <li><strong>Graphical rendering:</strong> The game is fully rendered using the <a href="https://www.libsdl.org/">SDL3 library</a>, with smooth updates for falling blocks, cleared lines, and score display.</li>
+    <li><strong>Audio feedback:</strong> Thanks to the <a href="https://miniaud.io/">miniaudio</a> library, the game includes background music, future plans about adding sound effects are being taken into account.</li>
+    <li><strong>Polished presentation:</strong> The game has an icon and title set for the window and executable, along with an introductory screen and proper game-over handling.<br><img src="../media/TetrisExe.png" alt="Tetris.exe" width="200"></li>
+  </ul>
+  <p>Controls:</p>
+  <ul>
+    <li><strong>Arrow Keys:</strong> Move tetrominoes</li>
+    <li><strong>C:</strong> Rotate clockwise the tetromino</li>
+    <li><strong>SPACEBAR:</strong>Pause the game</li>
+    <li><strong>ESC:</strong> Quit the game</li>
+  </ul>
+  <p id="status"><strong>Status: </strong>Released</p>
+  <p>
+    <strong>Tech stack:</strong> C, SDL3, miniaudio
+  </p>
+  <p><strong>Showcase:</strong></p>
+  <iframe frameborder="0" src="https://itch.io/embed/3822132?linkback=true&amp;border_width=5&amp;dark=true" width="560" height="175"><a href="https://dragondev-1.itch.io/tetris">Tetris-like by DragonDev</a></iframe><br>
+  
+  <a href="../index.html" class="back">← Back to Portfolio</a>
+</body>
+</html>
