@@ -1,7 +1,0 @@
-- 👋 Hi, I’m @DragonDev11
-- 👀 I’m interested in Game Developement
-- 🌱 I’m currently learning C
-- 🫱🏻‍🫲🏼 I’m looking to collaborate on a project
-- 📫 How to reach me:
-      - Discord: DragonDev_1#1857
-      - Gmail: dragoneevkharkov@gmail.com
